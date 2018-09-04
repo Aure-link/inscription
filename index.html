@@ -8,17 +8,58 @@
 </head>
 <body>
     <div class="bg">
-        <div class="form">
-            <div class="form-left">
-                <div class="form-left-title">
-                    Sign in
-                </div>
-                <div class="form-left-subtitle">
-                    Enter your personal information to log in
+        <div class="filter"></div>
+    </div>
+    <div class="form">
+        <div class="form-left">
+            <div class="form-left-title">
+                Sign in
+            </div>
+            <div class="form-left-subtitle">
+                Enter your personal <br> information to log in
+            </div>
+        </div>
+        <div class="form-right">
+            <div class="form-container">
+                <form action="">
+                    <div class="form-field">
+                        <label for="username" class="label">Username</label>
+                        <input type="text" name="username" id="username" required>
+                        <div class="validate"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form-field">
+                        <label for="email" class="label">Email</label>
+                        <input type="email" name="email" id="email">
+                        <div class="validate"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form-field">
+                        <label for="password" class="label">Password</label>
+                        <input type="password" name="password" id="password">
+                        <div class="info-password"></div>
+                        <div class="validate"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form-field">
+                        <label for="Cpassword" class="label">Confirm password</label>
+                        <input type="password" name="Cpassword" id="Cpassword">
+                        <div class="validate"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form-submit">
+                        <button class="submit-button" type="submit" name="form-submit">
+                            Get Started
+                        </button>
+                    </div>
+                </form>
+                <div class="sign-in">
+                    Already have an account ? <a class="sign-in-link"href="#">Sign in</a>
                 </div>
             </div>
-            <div class="form-right"></div>
         </div>
     </div>
+    <script src="./assets/js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="./assets/js/custom.js" charset="utf-8"></script>
 </body>
 </html>

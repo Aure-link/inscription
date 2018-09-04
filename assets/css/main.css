@@ -35,6 +35,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 @font-face {
   font-family: 'Muli';
   src: url("../fonts/Muli/Muli-Bold.woff2") format("woff2"), url("../fonts/Muli/Muli-Bold.woff") format("woff"), url("../fonts/Muli/Muli-Bold.ttf") format("truetype"), url("../fonts/Muli/Muli-Bold.svg#Muli-Bold") format("svg");
@@ -60,11 +64,121 @@ table {
   font-style: normal; }
 
 body {
-  height: 100vh; }
-
-.bg {
-  background-image: url(../img/bg-log.jpg);
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center; }
+  height: 100vh;
+  font-family: 'Muli'; }
+  body .bg {
+    background-image: url(../img/bg-log.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: blur(10px); }
+    body .bg .filter {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(159, 218, 215, 0.3); }
+  body .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 45%;
+    height: 50%;
+    min-height: 460px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5); }
+    body .form .form-left {
+      width: 40%;
+      background-color: #000;
+      color: #fff;
+      padding: 100px 25px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+      body .form .form-left .form-left-title {
+        font-size: 50px;
+        margin-bottom: 25px;
+        font-weight: 500;
+        letter-spacing: 1px; }
+      body .form .form-left .form-left-subtitle {
+        font-size: 20px;
+        line-height: 30px;
+        font-style: italic;
+        font-weight: 300; }
+    body .form .form-right {
+      width: 60%;
+      margin: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      body .form .form-right .form-container {
+        width: 100%; }
+        body .form .form-right .form-container .form-field {
+          margin: 35px 0;
+          position: relative; }
+          body .form .form-right .form-container .form-field .label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translate(0, -50%);
+            transition: 0.5s;
+            color: #6b6b6b;
+            font-size: 15px;
+            font-weight: 300;
+            pointer-events: none; }
+            body .form .form-right .form-container .form-field .label.toTop {
+              top: -50%;
+              left: 0;
+              color: grey;
+              font-size: 17px;
+              font-weight: 500; }
+          body .form .form-right .form-container .form-field input {
+            height: 25px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            padding: 0 5px; }
+            body .form .form-right .form-container .form-field input::placeholder {
+              opacity: 0;
+              transition: 0.3s;
+              font-style: italic;
+              font-size: 12px; }
+            body .form .form-right .form-container .form-field input.phVisible::placeholder {
+              opacity: 1; }
+        body .form .form-right .form-container .form-submit {
+          margin: 35px 0; }
+          body .form .form-right .form-container .form-submit .submit-button {
+            width: 100%;
+            height: 45px;
+            border-radius: 5px;
+            background-color: #9fdad7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #fff;
+            transition: 0.3s;
+            border: none;
+            font-size: 20px;
+            cursor: pointer; }
+            body .form .form-right .form-container .form-submit .submit-button:hover {
+              background-color: grey; }
+        body .form .form-right .form-container .sign-in {
+          text-align: center; }
+          body .form .form-right .form-container .sign-in .sign-in-link {
+            color: #9fdad7;
+            font-weight: 600;
+            transition: 0.3s; }
+            body .form .form-right .form-container .sign-in .sign-in-link:hover {
+              color: grey; }
