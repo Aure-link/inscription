@@ -148,16 +148,82 @@ body {
             border: none;
             border-bottom: 1px solid #ccc;
             width: 100%;
-            padding: 0 5px; }
-            body .form .form-right .form-container .form-field input::placeholder {
-              opacity: 0;
+            padding: 0 5px;
+            font-size: 15px; }
+          body .form .form-right .form-container .form-field #visible {
+            display: none; }
+          body .form .form-right .form-container .form-field .visible {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            text-align: center;
+            cursor: pointer; }
+            body .form .form-right .form-container .form-field .visible i {
+              font-size: 23px;
               transition: 0.3s;
-              font-style: italic;
-              font-size: 12px; }
-            body .form .form-right .form-container .form-field input.phVisible::placeholder {
-              opacity: 1; }
+              color: grey; }
+            body .form .form-right .form-container .form-field .visible:hover i {
+              color: #9fdad7; }
+          body .form .form-right .form-container .form-field.condition {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            margin-top: 25px; }
+            body .form .form-right .form-container .form-field.condition label {
+              position: relative;
+              width: auto;
+              cursor: pointer;
+              padding: 10px 0; }
+            body .form .form-right .form-container .form-field.condition input {
+              display: none; }
+            body .form .form-right .form-container .form-field.condition .checkbox {
+              width: 15px;
+              height: 15px;
+              border: 1px solid #9fdad7;
+              margin-right: 10px;
+              cursor: pointer;
+              transition: 0.3s;
+              position: relative; }
+              body .form .form-right .form-container .form-field.condition .checkbox:after {
+                content: '';
+                left: 4px;
+                top: 0;
+                width: 4px;
+                height: 8px;
+                position: absolute;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                display: block; }
+              body .form .form-right .form-container .form-field.condition .checkbox.checked {
+                background-color: #9fdad7; }
+          body .form .form-right .form-container .form-field .info-password {
+            width: calc(100% + 15px);
+            position: absolute;
+            top: 26px;
+            left: 0;
+            background-color: #fff;
+            border-bottom: 1px solid grey;
+            z-index: 1;
+            padding: 15px 0;
+            display: none; }
+            body .form .form-right .form-container .form-field .info-password .title {
+              margin-bottom: 10px;
+              font-weight: 600;
+              font-size: 15px; }
+            body .form .form-right .form-container .form-field .info-password .element {
+              display: flex;
+              align-items: center;
+              margin: 5px 0;
+              color: red; }
+              body .form .form-right .form-container .form-field .info-password .element i {
+                margin-right: 10px;
+                font-size: 20px; }
         body .form .form-right .form-container .form-submit {
-          margin: 35px 0; }
+          margin: 30px 0; }
           body .form .form-right .form-container .form-submit .submit-button {
             width: 100%;
             height: 45px;
